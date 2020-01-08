@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29505.145
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B2881413-1FC7-45A8-A297-125E586947B7}"
 	ProjectSection(SolutionItems) = preProject
@@ -40,6 +40,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisSessionStateProvider_net462", "src\RedisSessionStateProvider_net462\RedisSessionStateProvider_net462.csproj", "{F156BC3A-863B-4EFA-925A-8851464F0102}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisSessionStateProvider_net452", "src\RedisSessionStateProvider_net452\RedisSessionStateProvider_net452.csproj", "{F61A839E-8347-4B35-AC18-D4B380030AF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisSessionStateProvider_net450", "src\RedisSessionStateProvider_net450\RedisSessionStateProvider_net450.csproj", "{849881F5-470F-4257-8BC7-4366BF2A2D62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisSessionStateProviderWebNet450", "src\RedisSessionStateProviderWebNet450\RedisSessionStateProviderWebNet450.csproj", "{66DCD709-F2FA-44C0-98E8-597F444242CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +99,14 @@ Global
 		{F61A839E-8347-4B35-AC18-D4B380030AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F61A839E-8347-4B35-AC18-D4B380030AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F61A839E-8347-4B35-AC18-D4B380030AF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{849881F5-470F-4257-8BC7-4366BF2A2D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{849881F5-470F-4257-8BC7-4366BF2A2D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{849881F5-470F-4257-8BC7-4366BF2A2D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{849881F5-470F-4257-8BC7-4366BF2A2D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66DCD709-F2FA-44C0-98E8-597F444242CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66DCD709-F2FA-44C0-98E8-597F444242CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66DCD709-F2FA-44C0-98E8-597F444242CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66DCD709-F2FA-44C0-98E8-597F444242CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,5 +124,10 @@ Global
 		{20F392C3-CB0D-4327-8F17-5BE12DEFC7D4} = {9B71BFC6-68C2-46AE-8542-03D3C476E1CD}
 		{F156BC3A-863B-4EFA-925A-8851464F0102} = {E2756413-F53F-406C-BF26-87B30C765598}
 		{F61A839E-8347-4B35-AC18-D4B380030AF9} = {4F5E988E-F01F-42BB-8CBD-A00F7EA5C26D}
+		{849881F5-470F-4257-8BC7-4366BF2A2D62} = {4F5E988E-F01F-42BB-8CBD-A00F7EA5C26D}
+		{66DCD709-F2FA-44C0-98E8-597F444242CD} = {4F5E988E-F01F-42BB-8CBD-A00F7EA5C26D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {897ACBEE-2C0F-43A8-8799-02B1AE0B00F0}
 	EndGlobalSection
 EndGlobal

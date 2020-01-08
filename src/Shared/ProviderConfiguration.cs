@@ -30,6 +30,11 @@ namespace Microsoft.Web.Redis
         public string ConnectionString { get; set; }
         public string RedisSerializerType { get; set; }
 
+        //zk
+        public string ZKAddr { get; set; }
+        public string ZKProxy { get; set; }
+        public int ZKSessionTimeout { get; set; }
+
         /* Empty constructor required for testing */
         internal ProviderConfiguration()
         {}
@@ -117,6 +122,11 @@ namespace Microsoft.Web.Redis
 
             ConnectionTimeoutInMilliSec = GetIntSettings(config, "connectionTimeoutInMilliseconds", 0);
             OperationTimeoutInMilliSec = GetIntSettings(config, "operationTimeoutInMilliseconds", 0);
+
+            //ZK
+            ZKAddr = GetStringSettings(config, "zkaddr", null);
+            ZKProxy = GetStringSettings(config, "zkproxy", null);
+            ZKSessionTimeout = GetIntSettings(config, "zksessiontimeout", 60);
         }
 
         // 1) Use key available inside AppSettings
