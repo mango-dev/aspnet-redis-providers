@@ -123,7 +123,7 @@
   </ItemGroup>
   <Import Project="..\..\build\Source.PostProcessing.targets" />
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>$(OutputPath)$(TargetFrameworkVersion)\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <Prefer32Bit>false</Prefer32Bit>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
@@ -132,6 +132,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>call \\dll.517.jiali\dll\LibraryManager\PreBuildEvent.bat "$(TargetPath)" "$(SolutionFileName)" "$(ProjectFileName)"
+</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>call \\dll.517.jiali\dll\LibraryManager\PostBuildEvent.bat "$(TargetPath)" "$(SolutionFileName)" "$(ProjectFileName)" "addrely"
+</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
