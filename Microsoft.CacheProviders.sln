@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisSessionStateProvider_n
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisSessionStateProvider_net450_cc", "src\RedisSessionStateProvider_net450_cc\RedisSessionStateProvider_net450_cc.csproj", "{4AC7DDA7-B1D8-443E-8297-2FA24683E3D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisSessionStateProviderWebNet450_cc", "src\RedisSessionStateProviderWebNet450_cc\RedisSessionStateProviderWebNet450_cc.csproj", "{4B5539B8-D502-4E69-AFC4-8401BDEDE22A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,10 @@ Global
 		{4AC7DDA7-B1D8-443E-8297-2FA24683E3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AC7DDA7-B1D8-443E-8297-2FA24683E3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AC7DDA7-B1D8-443E-8297-2FA24683E3D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B5539B8-D502-4E69-AFC4-8401BDEDE22A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B5539B8-D502-4E69-AFC4-8401BDEDE22A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B5539B8-D502-4E69-AFC4-8401BDEDE22A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B5539B8-D502-4E69-AFC4-8401BDEDE22A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -119,6 +125,7 @@ Global
 		{F156BC3A-863B-4EFA-925A-8851464F0102} = {E2756413-F53F-406C-BF26-87B30C765598}
 		{F61A839E-8347-4B35-AC18-D4B380030AF9} = {4F5E988E-F01F-42BB-8CBD-A00F7EA5C26D}
 		{4AC7DDA7-B1D8-443E-8297-2FA24683E3D7} = {4F5E988E-F01F-42BB-8CBD-A00F7EA5C26D}
+		{4B5539B8-D502-4E69-AFC4-8401BDEDE22A} = {4F5E988E-F01F-42BB-8CBD-A00F7EA5C26D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B1960B0-6EF2-4588-8257-CFD5342141D3}
