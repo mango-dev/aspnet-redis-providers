@@ -1,0 +1,1046 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TT.Common.Frame.Model</name>
+    </assembly>
+    <members>
+        <member name="T:TT.Common.Frame.Model.CommonFilter">
+            <summary>
+            通用筛选条件
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/19
+        </member>
+        <member name="P:TT.Common.Frame.Model.CommonFilter.ServiceName">
+            <summary>
+            服务名
+            </summary>
+            <value>
+            The name of the service.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/19
+        </member>
+        <member name="P:TT.Common.Frame.Model.CommonFilter.Filters">
+            <summary>
+            筛选列表
+            </summary>
+            <value>
+            The filters.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/19
+        </member>
+        <member name="P:TT.Common.Frame.Model.CommonFilter.AllGetterFilters">
+            <summary>
+            所有取得数据接口通用筛选条件
+            </summary>
+            <value>
+            All getter filters.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/19
+        </member>
+        <member name="T:TT.Common.Frame.Model.ActionFilter">
+            <summary>
+            函数筛选器
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/19
+        </member>
+        <member name="P:TT.Common.Frame.Model.ActionFilter.ActionName">
+            <summary>
+            执行函数名
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/19
+        </member>
+        <member name="P:TT.Common.Frame.Model.ActionFilter.SiteName">
+            <summary>
+            取得数据的站点名
+            </summary>
+            <value>
+            The name of the site.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/19
+        </member>
+        <member name="P:TT.Common.Frame.Model.ActionFilter.ShaiNames">
+            <summary>
+            筛选列表
+            </summary>
+            <value>
+            The filter names.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/19
+        </member>
+        <member name="P:TT.Common.Frame.Model.ActionFilter.Shais">
+            <summary>
+            筛选列表
+            </summary>
+            <value>
+            The filtes.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/19
+        </member>
+        <member name="P:TT.Common.Frame.Model.ActionFilter.FilterNames">
+            <summary>
+            筛选名称列表
+            </summary>
+            <value>
+            The filter names.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/19
+        </member>
+        <member name="P:TT.Common.Frame.Model.ActionFilter.Filtes">
+            <summary>
+            筛选条件列表
+            </summary>
+            <value>
+            The filtes.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/19
+        </member>
+        <member name="T:TT.Common.Frame.Model.LinqFilterItem">
+            <summary>
+            检索的枚举
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/6
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqFilterItem.Dayu">
+            <summary>
+            &gt;
+            </summary>
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqFilterItem.Dayudengyu">
+            <summary>
+            &gt;=
+            </summary>
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqFilterItem.Xiaoyu">
+            <summary>
+            &lt;
+            </summary>
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqFilterItem.Xiaoyudengyu">
+            <summary>
+            &lt;=
+            </summary>
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqFilterItem.Budeng">
+            <summary>
+            &lt;&gt;
+            </summary>
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqFilterItem.Deng">
+            <summary>
+            =
+            </summary>
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqFilterItem.Inlist">
+            <summary>
+            in
+            </summary>
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqFilterItem.Like">
+            <summary>
+            like
+            </summary>
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqFilterItem.Notinlist">
+            <summary>
+            not in
+            </summary>
+        </member>
+        <member name="T:TT.Common.Frame.Model.LinqFilter">
+            <summary>
+            通用生成查询条件
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="M:TT.Common.Frame.Model.LinqFilter.#ctor(System.String,TT.Common.Frame.Model.LinqFilterItem,System.Object)">
+            <summary>
+            初始化一个 <see cref="T:TT.Common.Frame.Model.CommonFilterModel"/> 查询对象(单值).
+            </summary>
+            <param name="name">字段名</param>
+            <param name="filter">判断条件(=&gt;....like in not in)</param>
+            <param name="value">检索值</param>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/9/13
+        </member>
+        <member name="M:TT.Common.Frame.Model.LinqFilter.#ctor(System.String,TT.Common.Frame.Model.LinqFilterItem,System.Collections.Generic.List{System.Object})">
+            <summary>
+            初始化一个 <see cref="T:TT.Common.Frame.Model.CommonFilterModel"/> 查询对象(多值).
+            </summary>
+            <param name="name">字段名</param>
+            <param name="filter">判断条件(=&gt;....like in not in)</param>
+            <param name="values">检索值</param>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/9/13
+        </member>
+        <member name="M:TT.Common.Frame.Model.LinqFilter.TypeConvert(System.Type)">
+            <summary>
+            类型转换
+            </summary>
+            <param name="newType">转换成的类型</param>
+            <returns></returns>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/9/6
+        </member>
+        <member name="M:TT.Common.Frame.Model.LinqFilter.TypeConvert(System.Object,System.Type)">
+            <summary>
+            类型转换
+            </summary>
+            <param name="turnObject">转换的对象</param>
+            <param name="newType">转换成的类型</param>
+            <returns></returns>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/9/6
+        </member>
+        <member name="M:TT.Common.Frame.Model.LinqFilter.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:TT.Common.Frame.Model.LinqFilter.GetterProperty">
+            <summary>
+            当前条件使用的属性
+            </summary>
+            <value>
+            The getter property.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/6
+        </member>
+        <member name="P:TT.Common.Frame.Model.LinqFilter.LowerName">
+            <summary>
+            小写字段名
+            </summary>
+            <value>
+            The name of the lower.
+            </value>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/21
+        </member>
+        <member name="P:TT.Common.Frame.Model.LinqFilter.Name">
+            <summary>
+            字段名(对就实体类属性名)
+            </summary>
+            <value>
+            The name.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="P:TT.Common.Frame.Model.LinqFilter.Filter">
+            <summary>
+            查询条件(=>....like in not in)
+            </summary>
+            <value>
+            The filter.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="P:TT.Common.Frame.Model.LinqFilter.Value">
+            <summary>
+            用来查询的值
+            </summary>
+            <value>
+            The value.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="P:TT.Common.Frame.Model.LinqFilter.compareValue">
+            <summary>
+            用做比较的值
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/6
+        </member>
+        <member name="P:TT.Common.Frame.Model.LinqFilter.compareList">
+            <summary>
+            用作比较的列表
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/6
+        </member>
+        <member name="P:TT.Common.Frame.Model.LinqFilter.ListValue">
+            <summary>
+            采用In时的列表数据
+            </summary>
+            <value>
+            The list value.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="T:TT.Common.Frame.Model.CommonFilterModel">
+            <summary>
+            通用生成查询条件
+            </summary>
+            <remarks>我是备注</remarks>
+            <example>我是实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="M:TT.Common.Frame.Model.CommonFilterModel.#ctor(System.String,System.String,System.String)">
+            <summary>
+            初始化一个 <see cref="T:TT.Common.Frame.Model.CommonFilterModel"/> 查询对象(单值).
+            </summary>
+            <param name="name">字段名</param>
+            <param name="filter">判断条件(=&gt;....like in not in)</param>
+            <param name="value">检索值</param>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/9/13
+        </member>
+        <member name="M:TT.Common.Frame.Model.CommonFilterModel.#ctor(System.String,System.String,System.Collections.Generic.List{System.Object})">
+            <summary>
+            初始化一个 <see cref="T:TT.Common.Frame.Model.CommonFilterModel"/> 查询对象(多值).
+            </summary>
+            <param name="name">字段名</param>
+            <param name="filter">判断条件(=&gt;....like in not in)</param>
+            <param name="values">检索值</param>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/9/13
+        </member>
+        <member name="M:TT.Common.Frame.Model.CommonFilterModel.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:TT.Common.Frame.Model.CommonFilterModel.Name">
+            <summary>
+            字段名(对就实体类属性名)
+            </summary>
+            <value>
+            The name.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="P:TT.Common.Frame.Model.CommonFilterModel.Filter">
+            <summary>
+            查询条件(=>....like in not in)
+            </summary>
+            <value>
+            The filter.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="P:TT.Common.Frame.Model.CommonFilterModel.Value">
+            <summary>
+            用来查询的值
+            </summary>
+            <value>
+            The value.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="P:TT.Common.Frame.Model.CommonFilterModel.ListValue">
+            <summary>
+            采用In时的列表数据
+            </summary>
+            <value>
+            The list value.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="T:TT.Common.Frame.Model.LinqOrderType">
+            <summary>
+            排序枚举
+            </summary>
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqOrderType.Desc">
+            <summary>
+            倒序
+            </summary>
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqOrderType.Asc">
+            <summary>
+            正序
+            </summary>
+        </member>
+        <member name="T:TT.Common.Frame.Model.LinqOrderModel">
+            <summary>
+            通用排序字段
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqOrderModel._LowerName">
+            <summary>
+            字段名小写
+            </summary>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/20
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqOrderModel.PInfo">
+            <summary>
+            排序名(对就实体类属性名)
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="F:TT.Common.Frame.Model.LinqOrderModel.Order">
+            <summary>
+            排序(0 ASC 1 DESC)
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="P:TT.Common.Frame.Model.LinqOrderModel.LowerName">
+            <summary>
+            字段名小写
+            </summary>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/20
+        </member>
+        <member name="T:TT.Common.Frame.Model.CommonOrderModel">
+            <summary>
+            通用排序字段
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="F:TT.Common.Frame.Model.CommonOrderModel.Name">
+            <summary>
+            排序名(对就实体类属性名)
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="F:TT.Common.Frame.Model.CommonOrderModel.Order">
+            <summary>
+            排序(0 ASC 1 DESC)
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/8/29
+        </member>
+        <member name="T:TT.Common.Frame.Model.LinqCommonSort`1">
+            <summary>
+            排序类
+            </summary>
+            <typeparam name="T">object</typeparam>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/6
+        </member>
+        <member name="M:TT.Common.Frame.Model.LinqCommonSort`1.Sort(System.Type,System.Object,System.Object)">
+            <summary>
+            排序条件集合
+            </summary>
+            <param name="sortType">排序类型</param>
+            <param name="x">基础值</param>
+            <param name="y">对比值</param>
+            <returns>System.Int32</returns>
+        </member>
+        <member name="M:TT.Common.Frame.Model.LinqCommonSort`1.Compare(`0,`0)">
+            <summary>
+            比较排序
+            </summary>
+            <param name="x">基础值</param>
+            <param name="y">对比值</param>
+            <returns>System.Int32</returns>
+        </member>
+        <member name="P:TT.Common.Frame.Model.LinqCommonSort`1.sorts">
+            <summary>
+            排序条件集合
+            </summary>
+        </member>
+        <member name="T:TT.Common.Frame.Model.ListTSort`1">
+            <summary>
+            排序算法
+            </summary>
+            <typeparam name="T"></typeparam>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/19
+        </member>
+        <member name="M:TT.Common.Frame.Model.ListTSort`1.InsertSort(System.Collections.Generic.List{`0}@,System.Int32,System.Int32,System.Collections.Generic.IComparer{`0})">
+            <summary>
+            插入排序
+            </summary>
+            <param name="List">The list.</param>
+            <param name="Lo">The lo.</param>
+            <param name="Hi">The hi.</param>
+            <param name="comparer">The comparer.</param>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/19
+        </member>
+        <member name="M:TT.Common.Frame.Model.ListTSort`1.InsertSort(System.Collections.Generic.List{`0}@,System.Int32,System.Int32)">
+            <summary>
+            插入排序.
+            </summary>
+            <param name="List">The list.</param>
+            <param name="Lo">The lo.</param>
+            <param name="Hi">The hi.</param>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/19
+        </member>
+        <member name="M:TT.Common.Frame.Model.ListTSort`1.InsertSort(System.Collections.Generic.List{`0}@)">
+            <summary>
+            插入排序
+            </summary>
+            <param name="List">The list.</param>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/19
+        </member>
+        <member name="M:TT.Common.Frame.Model.ListTSort`1.QuickSort(System.Collections.Generic.List{`0},System.Int32,System.Int32,System.Collections.Generic.IComparer{`0})">
+            <summary>
+            快速排序
+            </summary>
+            <param name="List">The list.</param>
+            <param name="Lo">The lo.</param>
+            <param name="Hi">The hi.</param>
+            <param name="comparer">The comparer.</param>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/19
+        </member>
+        <member name="M:TT.Common.Frame.Model.ListTSort`1.QuickSort(System.Collections.Generic.List{`0},System.Int32,System.Int32)">
+            <summary>
+            快速排序.
+            </summary>
+            <param name="List">The list.</param>
+            <param name="Lo">The lo.</param>
+            <param name="Hi">The hi.</param>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/19
+        </member>
+        <member name="M:TT.Common.Frame.Model.ListTSort`1.QuickSort(System.Collections.Generic.List{`0})">
+            <summary>
+            快速排序
+            </summary>
+            <param name="List">The list.</param>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/19
+        </member>
+        <member name="M:TT.Common.Frame.Model.ListTSort`1.BinarySearch(`0[],System.Int32,System.Int32,`0,System.Collections.Generic.IComparer{`0})">
+            <summary>
+            二叉查找
+            </summary>
+            <param name="List">The list.</param>
+            <param name="Lo">The lo.</param>
+            <param name="Hi">The hi.</param>
+            <param name="vFind">The v find.</param>
+            <param name="comparer">The comparer.</param>
+            <returns></returns>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/19
+        </member>
+        <member name="M:TT.Common.Frame.Model.ListTSort`1.BinarySearch(`0[],System.Int32,System.Int32,`0)">
+            <summary>
+            二叉查找
+            </summary>
+            <param name="List">The list.</param>
+            <param name="Lo">The lo.</param>
+            <param name="Hi">The hi.</param>
+            <param name="vFind">The v find.</param>
+            <returns></returns>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/19
+        </member>
+        <member name="M:TT.Common.Frame.Model.ListTSort`1.BinarySearch(`0[],`0)">
+            <summary>
+            二叉查找
+            </summary>
+            <param name="List">The list.</param>
+            <param name="vFind">The v find.</param>
+            <returns></returns>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/19
+        </member>
+        <member name="T:TT.Common.Frame.Model.CommonSort`1">
+            <summary>
+            排序类
+            </summary>
+            <typeparam name="T">object</typeparam>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/11/6
+        </member>
+        <member name="M:TT.Common.Frame.Model.CommonSort`1.Sort(System.Type,System.Object,System.Object)">
+            <summary>
+            排序条件集合
+            </summary>
+            <param name="sortType">排序类型</param>
+            <param name="x">基础值</param>
+            <param name="y">对比值</param>
+            <returns>System.Int32</returns>
+        </member>
+        <member name="M:TT.Common.Frame.Model.CommonSort`1.Compare(`0,`0)">
+            <summary>
+            比较排序
+            </summary>
+            <param name="x">基础值</param>
+            <param name="y">对比值</param>
+            <returns>System.Int32</returns>
+        </member>
+        <member name="P:TT.Common.Frame.Model.CommonSort`1.sorts">
+            <summary>
+            排序条件集合
+            </summary>
+        </member>
+        <member name="T:TT.Common.Frame.Model.DefaultResult`1">
+            <summary>
+            包含 KEY Type  Debug Runtime
+            </summary>
+            <typeparam name="MT">The type of the T.</typeparam>
+        </member>
+        <member name="P:TT.Common.Frame.Model.DefaultResult`1.Key">
+            <summary>
+            操作名称
+            </summary>
+        </member>
+        <member name="P:TT.Common.Frame.Model.DefaultResult`1.Data">
+            <summary>
+            数据集合,Add时该值是主键
+            </summary>
+        </member>
+        <member name="P:TT.Common.Frame.Model.DefaultResult`1.RETData">
+            <summary>
+            加密数据字符串
+            </summary>
+        </member>
+        <member name="P:TT.Common.Frame.Model.DefaultResult`1.Debug">
+            <summary>
+            调试信息
+            </summary>
+        </member>
+        <member name="P:TT.Common.Frame.Model.DefaultResult`1.RunTime">
+            <summary>
+            执行耗时
+            </summary>
+        </member>
+        <member name="P:TT.Common.Frame.Model.DefaultResult`1.RetInt">
+            <summary>
+            数据影响行数
+            </summary>
+        </member>
+        <member name="T:TT.Common.Frame.Model.CommonItemString">
+            <summary>
+            通用返回 Id + String 的数据类型
+            </summary>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/9/28
+        </member>
+        <member name="T:TT.Common.Frame.Model.EntityBase">
+            <summary>
+            释放重写 IDisposable  调用GC回收机制
+            </summary>
+        </member>
+        <member name="M:TT.Common.Frame.Model.EntityBase.Dispose">
+            <summary>
+            执行与释放或重置非托管资源相关的应用程序定义的任务。
+            </summary>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/20
+        </member>
+        <member name="M:TT.Common.Frame.Model.EntityBase.CompareTo(System.Object,System.String)">
+            <summary>
+            内容比较函数
+            </summary>
+            <param name="entity">The entity.</param>
+            <param name="LowerName">Name of the lower.</param>
+            <returns></returns>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/20
+        </member>
+        <member name="M:TT.Common.Frame.Model.EntityBase.CompareTo(System.Object,System.Collections.Generic.List{TT.Common.Frame.Model.LinqOrderModel})">
+            <summary>
+            内容比较函数
+            </summary>
+            <param name="entity">数据</param>
+            <param name="orderModels">The order models.</param>
+            <returns></returns>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/20
+        </member>
+        <member name="M:TT.Common.Frame.Model.EntityBase.FindColumn(System.String)">
+            <summary>
+            查询字段
+            </summary>
+            <param name="ColunmName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TT.Common.Frame.Model.EntityBase.Equals(TT.Common.Frame.Model.LinqFilter)">
+            <summary>
+            比较是否符合条件
+            </summary>
+            <param name="filter">The filter.</param>
+            <returns></returns>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/21
+        </member>
+        <member name="M:TT.Common.Frame.Model.EntityBase.Equals(System.Collections.Generic.List{TT.Common.Frame.Model.LinqFilter})">
+            <summary>
+            比较是否符合条件
+            </summary>
+            <param name="filters">The filters.</param>
+            <returns></returns>
+            <remarks></remarks>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/21
+        </member>
+        <member name="M:TT.Common.Frame.Model.EntityBase.Equals``1(``0,TT.Common.Frame.Model.LinqFilter)">
+            <summary>
+            比较是否符合条件
+            </summary>
+            <param name="value">The value.</param>
+            <param name="filter">The filter.</param>
+            <returns></returns>
+            <example>实例</example>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/12/21
+        </member>
+        <member name="P:TT.Common.Frame.Model.CommonItemString.Id">
+            <summary>
+            ID
+            </summary>
+            <value>
+            The id.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/9/28
+        </member>
+        <member name="P:TT.Common.Frame.Model.CommonItemString.Value">
+            <summary>
+            值
+            </summary>
+            <value>
+            The value.
+            </value>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/9/28
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetCountByQuery(System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.String)">
+            <summary>
+            按条件取得记录总数量
+            </summary>
+            <param name="otherString">外部参数[(farmKey|参数名)($bc$|参数名/值分割符)(farmKey|参数值)($ac$|多参数间分割符)debug$bc$debug$ac$pageName$bc$pageName]</param>
+            <param name="filters"></param>
+            <returns>返回记录数</returns>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/10/30 18:34
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetCountByQueryJs(System.String,System.String)">
+            <summary>
+            按条件取得记录总数量(JS专用)
+            </summary>
+            <param name="otherString">外部参数[(farmKey|参数名)($bc$|参数名/值分割符)(farmKey|参数值)($ac$|多参数间分割符)debug$bc$debug$ac$pageName$bc$pageName]</param>
+            <param name="filters">格式----属性名$bc$比较参数$bc$属性值$ac$属性名$bc$比较参数$bc$属性值---eg---[flag$bc$=$bc$1$ac$username$bc$in$bc$张晓丰$cc$张宜新]---等价于---[ where flag = 1 and username in ('张晓丰','张宜新')]</param>
+            <returns>返回记录数</returns>
+            CreateUser:Mr.Zxf
+            CreateDate:2012/10/30 18:34
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetVersList(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.String,System.String)">
+            <summary>
+            取得版本号列表
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="filters"></param>
+            <param name="orders"></param>
+            <param name="versColumn"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetVersListJs(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            取得版本号列表
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="filters"></param>
+            <param name="orders"></param>
+            <param name="versColumn"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+            CreateUser:Mr.Zxf
+            CreateDate:2013/3/30 11:00
+        </member>
+        <!-- 对于成员“M:TT.Common.Frame.Model.IBaseInterface`1.GetIdList(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetIdListJs(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            取得ID列表
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="filters"></param>
+            <param name="orders"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+            CreateUser:Mr.Zxf
+            CreateDate:2013/3/30 11:00
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetListAll(System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+            <author>
+            张晓丰
+            </author>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetListByQueryJs(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="page">The page.</param>
+            <param name="pagesize">The pagesize.</param>
+            <param name="filters">The filters.</param>
+            <param name="orders">The orders.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+            <author>
+            张晓丰
+            </author>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetListByQuery(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="page">The page.</param>
+            <param name="pagesize">The pagesize.</param>
+            <param name="filters">The filters.</param>
+            <param name="orders">The orders.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+            <author>
+            张晓丰
+            </author>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetModelByID(System.Int32,System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="id">The id.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+            <author>
+            张晓丰
+            </author>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetModelByIDSJs(System.String,System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="idsString">The ids string.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+            <author>
+            张晓丰
+            </author>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetModelByIDS(System.Collections.Generic.List{System.Int32},System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="ids">The ids.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+            <author>
+            张晓丰
+            </author>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetModelByColName(System.String,System.String,System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="colValue">The col value.</param>
+            <param name="colName">Name of the col.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+            <author>
+            张晓丰
+            </author>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetModelByName(System.String,System.String)">
+            <summary>
+            获取
+            </summary>
+            <param name="nameValue">The name value.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+            <author>
+            张晓丰
+            </author>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetValuesByQuery(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            按条件取得指定字段
+            </summary>
+            <param name="page">The page.</param>
+            <param name="pagesize">The pagesize.</param>
+            <param name="filters">格式----属性名$bc$比较参数$bc$属性值$ac$属性名$bc$比较参数$bc$属性值---eg---[flag$bc$=$bc$1$ac$username$bc$in$bc$张晓丰$cc$张宜新]---等价于---[ where flag = 1 and username in ('张晓丰','张宜新')]</param>
+            <param name="orders">The orders.</param>
+            <param name="columns">The columns.</param>
+            <param name="otherString">外部参数[(farmKey|参数名)($bc$|参数名/值分割符)(farmKey|参数值)($ac$|多参数间分割符)debug$bc$debug$ac$pageName$bc$pageName]</param>
+            <returns>返回记录数</returns>
+            CreateUser:Mr.Zxf
+            CreateDate:2013/6/13 16:04
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetValuesByQueryJs(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            按条件取得指定字段
+            </summary>
+            <param name="page">The page.</param>
+            <param name="pagesize">The pagesize.</param>
+            <param name="filters">格式----属性名$bc$比较参数$bc$属性值$ac$属性名$bc$比较参数$bc$属性值---eg---[flag$bc$=$bc$1$ac$username$bc$in$bc$张晓丰$cc$张宜新]---等价于---[ where flag = 1 and username in ('张晓丰','张宜新')]</param>
+            <param name="orders">The orders.</param>
+            <param name="columns">The columns.</param>
+            <param name="otherString">外部参数[(farmKey|参数名)($bc$|参数名/值分割符)(farmKey|参数值)($ac$|多参数间分割符)debug$bc$debug$ac$pageName$bc$pageName]</param>
+            <returns>返回记录数</returns>
+            CreateUser:Mr.Zxf
+            CreateDate:2013/6/13 16:04
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetQueryCount(System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            取得统计结果
+            </summary>
+            <param name="filters">格式----属性名$bc$比较参数$bc$属性值$ac$属性名$bc$比较参数$bc$属性值---eg---[flag$bc$=$bc$1$ac$username$bc$in$bc$张晓丰$cc$张宜新]---等价于---[ where flag = 1 and username in ('张晓丰','张宜新')]</param>
+            <param name="columns">要统计的字段:格式格式-->"sum(YMoney) as YMoney","Hid"</param>
+            <param name="groups">分组条件:格式"Hid"</param>
+            <param name="otherString">外部参数[(farmKey|参数名)($bc$|参数名/值分割符)(farmKey|参数值)($ac$|多参数间分割符)debug$bc$debug$ac$pageName$bc$pageName]</param>
+            <returns></returns>
+            CreateUser:Mr.Zxf
+            CreateDate:2013/6/13 16:04
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.AddJs(System.String,System.String)">
+            <summary>
+            Adds the js.
+            </summary>
+            <param name="entityString">The entity string.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.Add(`0,System.String)">
+            <summary>
+            Adds the specified entity.
+            </summary>
+            <param name="entity">The entity.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.AddList(System.Collections.Generic.List{`0},System.String)">
+            <summary>
+            Adds the list.
+            </summary>
+            <param name="entity">The entity.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.UpdateJs(System.String,System.String)">
+            <summary>
+            Updates the js.
+            </summary>
+            <param name="entityString">The entity string.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.Update(`0,System.String)">
+            <summary>
+            Updates the specified entity.
+            </summary>
+            <param name="entity">The entity.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.DeleteJs(System.String,System.String)">
+            <summary>
+            Deletes the js.
+            </summary>
+            <param name="entityString">The entity string.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.Delete(`0,System.String)">
+            <summary>
+            Deletes the specified entity.
+            </summary>
+            <param name="entity">The entity.</param>
+            <param name="otherString">The other string.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.UpdateByFilter(`0,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.String)">
+            <summary>
+            按条件更新列表
+            </summary>
+            <param name="entity">更新实体</param>
+            <param name="entityString">格式----属性名$bc$属性值$ac$属性名$bc$属性值---eg---[userid$bc$12256$ac$username$bc$张晓丰]</param>
+            <param name="otherString">外部参数[(farmKey|参数名)($bc$|参数名/值分割符)(farmKey|参数值)($ac$|多参数间分割符)debug$bc$debug$ac$pageName$bc$pageName]</param>
+            <returns></returns>
+            CreateUser:Mr.Zxf
+            CreateDate:2013/3/23 8:04
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.DeleteByFilter(System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.String)">
+            <summary>
+            按条件删除列表
+            </summary>
+            <param name="entityString">格式----属性名$bc$属性值$ac$属性名$bc$属性值---eg---[userid$bc$12256$ac$username$bc$张晓丰]</param>
+            <param name="otherString">外部参数[(farmKey|参数名)($bc$|参数名/值分割符)(farmKey|参数值)($ac$|多参数间分割符)debug$bc$debug$ac$pageName$bc$pageName]</param>
+            <returns></returns>
+            CreateUser:Mr.Zxf
+            CreateDate:2013/3/23 8:04
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.GetDateTimes">
+            <summary>
+            获取
+            </summary>
+            <returns></returns>
+            <author>
+            张晓丰
+            </author>
+        </member>
+        <member name="M:TT.Common.Frame.Model.IBaseInterface`1.Clear">
+            <summary>
+            Clears this instance.
+            </summary>
+        </member>
+    </members>
+</doc>

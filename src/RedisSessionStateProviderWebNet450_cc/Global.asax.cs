@@ -7,10 +7,7 @@ using System.Web.SessionState;
 
 namespace RedisSessionStateProviderWebNet450_cc
 {
-    public class Global : System.Web.HttpApplication
-    {
-        protected void Application_Start(object sender, EventArgs e)
-        {
-        }
+    public class Global : MangoMis.Frame.Frame.GlobalPageFrame
+    {        
     }
 }

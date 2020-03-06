@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfVirtualPageUse>
+  <VirtualPageUse>
+    <PageClassFullTypeName>MangoMis.Frame.VirPages.PageLookDescription</PageClassFullTypeName>
+    <PageClassName>查看说明信息</PageClassName>
+    <IsOpened>0</IsOpened>
+  </VirtualPageUse>
+  <VirtualPageUse>
+    <PageClassFullTypeName>MangoMis.Frame.VirPages.PageWriteScript</PageClassFullTypeName>
+    <PageClassName>站点加载JS</PageClassName>
+    <IsOpened>0</IsOpened>
+  </VirtualPageUse>
+  <VirtualPageUse>
+    <PageClassFullTypeName>MangoMis.Frame.VirPages.PageAutoInterface</PageClassFullTypeName>
+    <PageClassName>动态接口</PageClassName>
+    <IsOpened>0</IsOpened>
+  </VirtualPageUse>
+  <VirtualPageUse>
+    <PageClassFullTypeName>MangoMis.Frame.VirPages.PageAutoApi</PageClassFullTypeName>
+    <PageClassName>MangoAPI管理</PageClassName>
+    <IsOpened>0</IsOpened>
+  </VirtualPageUse>
+</ArrayOfVirtualPageUse>
