@@ -46,7 +46,7 @@ namespace Microsoft.Web.Redis
         /// </summary>
         /// <param name="key"></param>
         /// <param name="value"></param>
-        private static void CodisMangoProxyAddrConfigChange(string key, string value)
+        public static void CodisMangoProxyAddrConfigChange(string key, string value)
         {
             if (isInit && !string.IsNullOrWhiteSpace(value))
             {
