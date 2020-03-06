@@ -44,3 +44,4 @@ Build/BinScopeTargetDir/
 Scripts/
 
 /.vs/*
+/src/RedisSessionStateProviderWebNet450_cc/writedir/logs
