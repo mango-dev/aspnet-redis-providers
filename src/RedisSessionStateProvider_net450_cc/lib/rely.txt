@@ -1,0 +1,1 @@
+["MangoMis.Frame.dll","BaseCommon.dll","LitJson.dll","ServiceStack.Interfaces.dll","ServiceStack.Text.dll","TT.Common.Frame.dll","LogentriesCore.dll","TT.Frame.Decrypt.dll","TT.Common.Frame.Model.dll","LogentriesLog4net.dll","ISecondBase_2.dll","ChnCharInfo.dll","log4net.dll","System.Net.Json.dll","ServiceStack.Redis.dll","ServiceStack.Common.dll"]

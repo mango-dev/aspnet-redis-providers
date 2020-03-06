@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ISecondBase_2</name>
+    </assembly>
+    <members>
+        <member name="T:ISecondBase.BusyException">
+            <summary>
+            忙碌异常
+            </summary>
+        </member>
+        <member name="T:ISecondBase.ISecondBaseInterface`1">
+            <summary>
+            接口的基类
+            </summary>
+            <typeparam name="Entity">第一层WCF实体</typeparam>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.CacheReloadAndUpdate(System.Collections.Generic.List{System.Int32},System.String)">
+            <summary>
+            重新加载id集合对应行的Cache
+            </summary>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.CacheReloadAndUpdate(System.String)">
+            <summary>
+            重新加载所有Cache
+            </summary>
+            <param name="id">主键值</param>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.CacheReloadAndUpdate(System.Int32,System.String)">
+             <summary>
+             重新加载id所在行的Cache
+             </summary>
+            <param name="idList">id集合</param>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.Add(`0,System.String)">
+            <summary>
+            向数据库中添加数据
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.AddAndGetModel(`0,System.String)">
+            <summary>
+            向数据库中添加数据,并返回添加后数据库中的数据
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.AddList(System.Collections.Generic.List{`0},System.String)">
+            <summary>
+            向数据库中添加数据集合
+            </summary>
+            <param name="entities"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.Update(`0,System.String)">
+            <summary>
+            更新数据库中的数据
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.UpdateList(System.Collections.Generic.List{`0},System.String)">
+            <summary>
+            更新多条数据库中的数据
+            </summary>
+            <param name="entities">实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.UpdateByFilters(`0,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.String)">
+            <summary>
+            按照条件更新多个数据库中的数据
+            </summary>
+            <param name="filters"></param>
+            <param name="entity"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.Delete(`0,System.String)">
+            <summary>
+            删除数据记录
+            </summary>
+            <param name="entity"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.DeleteById(System.Int32,System.String)">
+            <summary>
+            通过主键删除数据
+            </summary>
+            <param name="id"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.DeleteByFilters(System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.String)">
+            <summary>
+            通过条件删除数据
+            </summary>
+            <param name="filters"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetModelByID(System.Int32,System.String)">
+            <summary>
+            通过id获取一个实体
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetModelByIDAndUpdateTimes(System.Int32,System.Int32,System.String)">
+            <summary>
+            通过id获取一个实体并更新次数
+            </summary>
+            <param name="id">主键</param>
+            <param name="times">次数</param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetListByQuery(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.String)">
+            <summary>
+            通过分页、条件、排序查询数据
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="filters"></param>
+            <param name="orders"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetListByQuerySkip(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.Int32,System.String)">
+            <summary>
+            通过分页、条件、排序查询数据
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="filters"></param>
+            <param name="orders"></param>
+            <param name="skipnumber"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetIdList(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.String)">
+            <summary>
+            通过分页、条件、排序查询数据主键
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="filters"></param>
+            <param name="orders"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetValuesByQuery(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            通过分页、条件、排序查询数据列的值
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="filters"></param>
+            <param name="orders"></param>
+            <param name="columns"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetCountByQuery(System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.String)">
+            <summary>
+            获取统计数
+            </summary>
+            <param name="filters"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetQueryAggregate(System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            获取聚合函数数据
+            </summary>
+            <param name="filters"></param>
+            <param name="columns"></param>
+            <param name="groups"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetQueryAggregatePage(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.String)">
+            <summary>
+            获取聚合函数数据
+            </summary>
+            <param name="filters"></param>
+            <param name="columns"></param>
+            <param name="groups"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetModelByIDS(System.Collections.Generic.List{System.Int32},System.String)">
+            <summary>
+            通过id的集合获取集合
+            </summary>
+            <param name="idlist"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetChangeIds(System.String)">
+            <summary>
+            获取变更id集合
+            </summary>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetModelByIDLock(System.Int32,System.String)">
+            <summary>
+            通过id获取一个实体
+            </summary>
+            <param name="id">主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetListByQueryLock(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.String)">
+            <summary>
+            通过分页、条件、排序查询数据
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="filters"></param>
+            <param name="orders"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetIdListLock(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.String)">
+            <summary>
+            通过分页、条件、排序查询数据主键
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="filters"></param>
+            <param name="orders"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetValuesByQueryLock(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            通过分页、条件、排序查询数据列的值
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="filters"></param>
+            <param name="orders"></param>
+            <param name="columns"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetCountByQueryLock(System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.String)">
+            <summary>
+            获取统计数
+            </summary>
+            <param name="filters"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetQueryAggregatePageLock(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.String)">
+            <summary>
+            获取聚合函数数据
+            </summary>
+            <param name="filters"></param>
+            <param name="columns"></param>
+            <param name="groups"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetModelByIDSLock(System.Collections.Generic.List{System.Int32},System.String)">
+            <summary>
+            通过id的集合获取集合
+            </summary>
+            <param name="idlist"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetQueryAggregateLock(System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            获取聚合函数数据
+            </summary>
+            <param name="filters"></param>
+            <param name="columns"></param>
+            <param name="groups"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ISecondBase.ISecondBaseInterface`1.GetColumnsNoCount(System.Int32,System.Int32,System.Collections.Generic.List{TT.Common.Frame.Model.CommonFilterModel},System.Collections.Generic.List{TT.Common.Frame.Model.CommonOrderModel},System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            指定列数据查询并且不进行count操作
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="filters"></param>
+            <param name="orders"></param>
+            <param name="columns"></param>
+            <param name="otherString"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
