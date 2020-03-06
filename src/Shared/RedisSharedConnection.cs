@@ -21,6 +21,15 @@ namespace Microsoft.Web.Redis
         internal static TimeSpan ReconnectFrequency = TimeSpan.FromSeconds(60);
         internal static TimeSpan ReconnectErrorThreshold = TimeSpan.FromSeconds(30);
 
+        /// <summary>
+        /// 是否启用CC配置
+        /// </summary>
+        private bool ccBindState =>ConfigCenterHelper.ccBindState;
+        /// <summary>
+        /// CC中redis的集群Host信息
+        /// </summary>
+        private string ccRedisHostsStr => ConfigCenterHelper.ccRedisHostsStr;
+
         // Used for mocking in testing
         internal RedisSharedConnection()
         { }
@@ -28,7 +37,7 @@ namespace Microsoft.Web.Redis
         public RedisSharedConnection(ProviderConfiguration configuration)
         {
             _configuration = configuration;
-            
+
             // If connection string is given then use it otherwise use individual options
             if (!string.IsNullOrEmpty(configuration.ConnectionString))
             {
@@ -63,7 +72,19 @@ namespace Microsoft.Web.Redis
                     _configOption.SyncTimeout = configuration.OperationTimeoutInMilliSec;
                 }
             }
-            CreateMultiplexer();
+            ConfigCenterHelper.ccBindState = configuration.CCBindState;
+            if (ccBindState)
+            {
+                //CC中获取Redis的连接信息
+                //赋初值
+                ConfigCenterHelper.ccRedisHostsStr = configuration.Host + ":" + configuration.Port;
+                //拉取绑定CC的ccRedisHostsStr
+                BuildCC();
+            }
+            else
+            {
+                CreateMultiplexer();
+            }
         }
 
         public IDatabase Connection
@@ -76,59 +97,46 @@ namespace Microsoft.Web.Redis
             var previousReconnect = lastReconnectTime;
             var elapsedSinceLastReconnect = DateTimeOffset.UtcNow - previousReconnect;
 
-            // If mulitple threads call ForceReconnect at the same time, we only want to honor one of them. 
-            if (elapsedSinceLastReconnect > ReconnectFrequency)
+            lock (reconnectLock)
             {
-                lock (reconnectLock)
-                {
-                    var utcNow = DateTimeOffset.UtcNow;
-                    elapsedSinceLastReconnect = utcNow - lastReconnectTime;
-                    
-                    if (elapsedSinceLastReconnect < ReconnectFrequency)
-                    {
-                        return; // Some other thread made it through the check and the lock, so nothing to do. 
-                    }
+                var utcNow = DateTimeOffset.UtcNow;
+                elapsedSinceLastReconnect = utcNow - lastReconnectTime;
 
-                    if (firstErrorTime == DateTimeOffset.MinValue)
-                    {
-                        // We got error first time after last reconnect
-                        firstErrorTime = utcNow;
-                        previousErrorTime = utcNow;
-                        return;
-                    }
+                var elapsedSinceFirstError = utcNow - firstErrorTime;
+                var elapsedSinceMostRecentError = utcNow - previousErrorTime;
+                previousErrorTime = utcNow;
 
-                    var elapsedSinceFirstError = utcNow - firstErrorTime;
-                    var elapsedSinceMostRecentError = utcNow - previousErrorTime;
-                    previousErrorTime = utcNow;
+                LogUtility.LogInfo($"ForceReconnect: now: {utcNow.ToString()}");
+                LogUtility.LogInfo($"ForceReconnect: elapsedSinceLastReconnect: {elapsedSinceLastReconnect.ToString()}, ReconnectFrequency: {ReconnectFrequency.ToString()}");
+                LogUtility.LogInfo($"ForceReconnect: elapsedSinceFirstError: {elapsedSinceFirstError.ToString()}, elapsedSinceMostRecentError: {elapsedSinceMostRecentError.ToString()}, ReconnectErrorThreshold: {ReconnectErrorThreshold.ToString()}");
 
-                    if ((elapsedSinceFirstError >= ReconnectErrorThreshold) && (elapsedSinceMostRecentError <= ReconnectErrorThreshold))
-                    {
-                        LogUtility.LogInfo($"ForceReconnect: now: {utcNow.ToString()}");
-                        LogUtility.LogInfo($"ForceReconnect: elapsedSinceLastReconnect: {elapsedSinceLastReconnect.ToString()}, ReconnectFrequency: {ReconnectFrequency.ToString()}");
-                        LogUtility.LogInfo($"ForceReconnect: elapsedSinceFirstError: {elapsedSinceFirstError.ToString()}, elapsedSinceMostRecentError: {elapsedSinceMostRecentError.ToString()}, ReconnectErrorThreshold: {ReconnectErrorThreshold.ToString()}");
+                firstErrorTime = DateTimeOffset.MinValue;
+                previousErrorTime = DateTimeOffset.MinValue;
 
-                        firstErrorTime = DateTimeOffset.MinValue;
-                        previousErrorTime = DateTimeOffset.MinValue;
-
-                        var oldMultiplexer = _redisMultiplexer;
-                        CloseMultiplexer(oldMultiplexer);
-                        CreateMultiplexer();
-                    }
-                }
+                var oldMultiplexer = _redisMultiplexer;
+                CloseMultiplexer(oldMultiplexer);
+                CreateMultiplexer();
             }
         }
 
         private void CreateMultiplexer()
         {
-            if (LogUtility.logger == null)
+            if (ccBindState)
             {
-                _redisMultiplexer = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(_configOption));
+                CreateMultiplexerByCC();
             }
             else
             {
-                _redisMultiplexer = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(_configOption, LogUtility.logger));
+                if (LogUtility.logger == null)
+                {
+                    _redisMultiplexer = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(_configOption));
+                }
+                else
+                {
+                    _redisMultiplexer = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(_configOption, LogUtility.logger));
+                }
+                lastReconnectTime = DateTimeOffset.UtcNow;
             }
-            lastReconnectTime = DateTimeOffset.UtcNow;
         }
 
         private void CloseMultiplexer(Lazy<ConnectionMultiplexer> oldMultiplexer)
@@ -145,6 +153,58 @@ namespace Microsoft.Web.Redis
                 }
             }
         }
+
+        #region CC中获取Redis连接信息并创建复用连接
+
+        public void UpdateMultiplexer(string CCRedisHostsStr)
+        {
+            if (!string.IsNullOrEmpty(CCRedisHostsStr))
+            {
+                LogUtility.LogWarning("UpdateMultiplexer => {0}", CCRedisHostsStr);
+                ConfigCenterHelper.ccRedisHostsStr = CCRedisHostsStr;
+                ForceReconnect();
+            }
+        }
+
+        /// <summary>
+        /// 构建一个订阅CC变化自动更新的连接实例
+        /// </summary>
+        /// <returns></returns>
+        private void BuildCC()
+        {
+            ConfigCenterHelper.GetCodisMangoProxyAddrConfig((key, values) =>
+            {
+                UpdateMultiplexer(values);
+            });
+
+            //创建连接
+            CreateMultiplexerByCC();
+        }
+
+        /// <summary>
+        /// 构建一个从CC获取的Redis集群的连接实例
+        /// </summary>
+        /// <returns></returns>
+        private void CreateMultiplexerByCC()
+        {
+
+            string redisMasterHostsStr = ccRedisHostsStr.TrimEnd(',') + ",";
+
+            var constr = string.Format("{0}DefaultDatabase={1}", redisMasterHostsStr, _configOption.DefaultDatabase == null ? 0 : _configOption.DefaultDatabase);
+            LogUtility.LogWarning("redisMasterHostsStr => {0}", constr);
+
+            if (LogUtility.logger == null)
+            {
+                _redisMultiplexer = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(constr));
+            }
+            else
+            {
+                _redisMultiplexer = new Lazy<ConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(constr, LogUtility.logger));
+            }
+            lastReconnectTime = DateTimeOffset.UtcNow;
+        }
+
+        #endregion CC中获取Redis连接信息并创建复用连接
 
     }
 }

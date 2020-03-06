@@ -30,6 +30,9 @@ namespace Microsoft.Web.Redis
         public string ConnectionString { get; set; }
         public string RedisSerializerType { get; set; }
 
+        public bool CCBindState { get; set; }
+
+
         /* Empty constructor required for testing */
         internal ProviderConfiguration()
         {}
@@ -117,6 +120,9 @@ namespace Microsoft.Web.Redis
 
             ConnectionTimeoutInMilliSec = GetIntSettings(config, "connectionTimeoutInMilliseconds", 0);
             OperationTimeoutInMilliSec = GetIntSettings(config, "operationTimeoutInMilliseconds", 0);
+
+            // CC
+            CCBindState = GetBoolSettings(config, "ccbindstate", false);
         }
 
         // 1) Use key available inside AppSettings
