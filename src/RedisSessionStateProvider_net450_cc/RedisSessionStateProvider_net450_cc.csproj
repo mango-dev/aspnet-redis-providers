@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Microsoft.Web.Redis</RootNamespace>
-    <AssemblyName>Microsoft.Web.RedisSessionStateProvider</AssemblyName>
+    <AssemblyName>Microsoft.Web.RedisSessionStateProviderForCC</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
